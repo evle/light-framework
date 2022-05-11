@@ -1,13 +1,13 @@
 {
-    "name": "team dashboard",
-    "short_name": "td",
+    "name": "Team Dashboard",
+    "short_name": "Team Dashboard",
     "start_url": "/",
-    "display": "browser",
-    "background_color": "#ff9900",
+    "display": "standalone",
+    "background_color": "#d04a02",
     "dir": "ltr",
     "orientation": "any",
     "scope": "/",
-    "theme_color": "#ff9900",
+    "theme_color": "#d04a02",
     "icons": [
         {
             "src": "/icon_48x48.png",

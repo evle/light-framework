@@ -1,7 +1,36 @@
 <html>
-    <head>
-        <link rel="manifest" href="manifest.json"> 
-    </head>
-    <body>
-    </body>
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#d04a02" />
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="red" /> -->
+    <link rel="apple-touch-startup-image" href="/launch.png">
+    <link rel="apple-touch-icon" href="https://i0.hdslb.com/bfs/album/3d8feaad28e9a7d923c3c3360f2c15f269c8222e.png">
+  </head>
+  <body>
+    <h1>hello</h1>
+    <input id="pic" type="file" accept="image/*" capture="camera" />
+    <img id="test" />
+    <script>
+        
+document.getElementById( 'pic').addEventListener( 'change', function (e) {
+    console.log(e)
+    let file =  this.files[0];
+    var reader = new FileReader();
+
+reader.readAsDataURL(file);
+
+reader.onload = function() {
+
+    // base64_code.innerHTML = this.result;
+
+    //this.result里的这个result是FileReader.readAsDataURL()接口当中转换完图片输出的base64结果存放在result当中
+
+      let img_area=  document.getElementById('test');
+      img_area.src =  this.result;
+    // img_area.innerHTML = '<div>图片img标签展示：</div><img src="' + this.result + '" alt=""/>';
+
+}
+})
+    </script>
+  </body>
 </html>
